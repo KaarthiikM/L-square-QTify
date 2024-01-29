@@ -3,5 +3,6 @@
     color: var(--color-primary);
     border-radius: 12px;
     padding: 10px 16px;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
