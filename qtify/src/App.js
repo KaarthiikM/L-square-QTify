@@ -2,8 +2,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import { fetchTopAlbums } from "./api/api";
 import { useState , useEffect } from "react";
-import Card from "./components/Card/Card";
 import Section from "./components/Section/Section";
+import styles from './App.module.css'
 
 function App() {
   const [topAlbumsData,settopAlbumsData] = useState([]);
@@ -25,12 +25,10 @@ function App() {
     <div>
       <Navbar/>
       <Hero/>
-      {/* {
-        topAlbumsData.map((topAlbum)=>(
-          <Card data={topAlbum} type="album" key={topAlbum.id}/>
-        ))
-      } */}
+      <div className={styles.sectionWrapper}>
       <Section data={topAlbumsData} title="Top Albums" type="album"/>
+      <Section data={topAlbumsData} title="New Albums" type="album"/>
+      </div>
     </div>
   );
 }
