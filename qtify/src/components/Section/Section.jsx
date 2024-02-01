@@ -4,7 +4,8 @@ import { CircularProgress } from '@mui/material';
 import Card from '../Card/Card';
 import Carousel from '../Carousel/Carousel';
 
-const Section = ({data,title,type}) => {
+
+const Section = ({data,title,type,handleChange=null,value=0}) => {
     const [carouselToggle, setCarouselToggle] = useState(true);
 
     const handleToggle = ()=>{
@@ -19,6 +20,7 @@ const Section = ({data,title,type}) => {
                 {!carouselToggle ? "Collapse" : "Show all"}
             </h4>
         </div>
+        
         {
             data.length===0 ? (
             <CircularProgress/>
